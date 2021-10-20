@@ -1,0 +1,5 @@
+1. link inputs with local state
+2. update global state and link via props click event
+3. create elements for all foldres and links
+4. create folder/links elements
+5?. create drag-and-drop linking
