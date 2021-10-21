@@ -8,9 +8,9 @@ interface IProps {
 
 const LinksDisplay: React.FC<IProps>  = ({links}) => {
     return (
-        <div>
+        <div className="display__container">
             {
-                links.map((l, i) => <LinkElem key={i} data={l} />)
+                links.map((l, i) => <LinkElem key={i} data={l} index={i}/>)
             }
         </div>
     );
