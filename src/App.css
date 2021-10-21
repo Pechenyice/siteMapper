@@ -1,3 +1,13 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: darkcyan;
+}
+
 .main__modalManager {
   position: fixed;
   bottom: 0;
@@ -12,13 +22,31 @@
 }
 
 .main__redactor {
-  width: 200px;
-  height: 200px;
-  border: 2px solid black;
+  width: 250px;
+  height: 250px;
+  border: 2px solid white;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: white;
+  padding: 20px;
+}
+
+.display__container {
+  width: max-content;
+  max-width: 500px;
+  min-width: 250px;
+  height: max-content;
+  max-height: 500px;
+  min-height: 250px;
+  border: 2px solid white;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  background: white;
+  padding: 20px;
+  gap: 20px;
 }
 
 .redactor__wrapper {
@@ -28,4 +56,22 @@
 
 .redactor__wrapper button {
   margin: auto;
+}
+
+.main__displayWrapper {
+  width: 100%;
+  height: max-content;
+  max-height: calc(100vh - 300px);
+  overflow-y: scroll;
+  background: rgb(223, 223, 223);
+  margin-bottom: 300px;
+}
+
+.main__display {
+  width: 1200px;
+  margin: auto;
+  height: max-content;
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-between;
 }
