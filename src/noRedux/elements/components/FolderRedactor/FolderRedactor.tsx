@@ -23,10 +23,12 @@ function FolderRedactor({ handleAddFolder }: IProps) {
 	return (
 		<section className="main__folderRedactor main__redactor">
 			<div className="redactor__wrapper">
+				<label htmlFor="folder">Folder name: </label>
 				<input
 					type="text"
 					value={folder}
 					onChange={handleFolderChange}
+					name={"folder"}
 				></input>
 				<button onClick={handleFolderCreate}>create folder</button>
 			</div>
