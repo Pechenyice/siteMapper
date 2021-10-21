@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import TSRootApp from './noRedux/elements/TSRootApp';
+import ReduxTSRootApp from './redux/elements/ReduxTSRootApp';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
         process.env.REACT_APP_MODE === 'TS' && <TSRootApp /> 
       }
       {
-        process.env.REACT_APP_MODE === 'TS+REDUX' && null //redux version
+        process.env.REACT_APP_MODE === 'TS+REDUX' && <ReduxTSRootApp />
       }
     </div>
   );
