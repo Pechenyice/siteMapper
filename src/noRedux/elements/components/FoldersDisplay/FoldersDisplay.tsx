@@ -9,9 +9,9 @@ interface IProps {
 
 const FoldersDisplay: React.FC<IProps>  = ({folders}) => {
     return (
-        <div>
+        <div className="display__container">
             {
-                folders.map((f, i) => <FolderElem key={i} data={f} />)
+                folders.map((f, i) => <FolderElem key={i} data={f} index={i} />)
             }
         </div>
     );
