@@ -16,6 +16,10 @@ const ModalManager: React.FC<IProps>  = ({setLinks, links, setFolders, folders})
             ...folders,
             folder
         ]);
+        localStorage.setItem('siteMapperFolders', JSON.stringify([
+            ...folders,
+            folder
+        ]));
     }
 
     function handleAddLink(link: PProps["link"]) {
@@ -23,12 +27,16 @@ const ModalManager: React.FC<IProps>  = ({setLinks, links, setFolders, folders})
             ...links,
             link
         ]);
+        localStorage.setItem('siteMapperLinks', JSON.stringify([
+            ...links,
+            link
+        ]));
     }
 
     return (
         <section className="main__modalManager">
             <FolderRedactor handleAddFolder={handleAddFolder}/>
-            <FavoriteRedactor handleAddLink={handleAddLink}/>
+            <FavoriteRedactor handleAddLink={handleAddLink} handleAddFolder={handleAddFolder} folders={folders}/>
         </section>
     );
 }
